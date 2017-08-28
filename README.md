@@ -1,1 +1,1 @@
-# binary-tree
+## A sample binary tree in Clang.
