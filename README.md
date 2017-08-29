@@ -1,1 +1,1 @@
-## A sample binary tree in Clang.
+## Uma simples árvore binária escrita em Python
