@@ -73,23 +73,23 @@ class Arvore:
 
     def deletar(self, chave):
         if self.tamanho > 1:
-            # adiquirindo o nó corretamente de acordo com sua chave
+            # adquirindo o nó corretamente de acordo com sua chave
             # atualmente só temos a chave
             noParaDeletar = self._get(chave, self.raiz)
             if noParaDeletar:
                 self.remover(noParaDeletar)
-                # decrementando tamanho da arvore
+                # decrementando o tamanho da arvore
                 self.tamanho = self.tamanho - 1
             else:
-                raise KeyError('Chave não encontrada na árvore altual')
+                raise KeyError('Chave nao encontrada na arvore atual')
         # esfaziamos a lista caso possuir apenas 1 elemento
         elif self.tamanho == 1 and self.raiz.chave == chave:
             self.raiz = None
             self.tamanho = self.tamanho - 1
         else:
-            raise KeyError('Chave não encontrada na árvore altual')
+            raise KeyError('Chave nao encontrada na arvore atual')
 
-    # bucar sucessor
+    # buscar sucessor
     def buscarSucessor(self):
         sucessor = None
         if self.temFilhoDireita():
@@ -104,7 +104,6 @@ class Arvore:
                     sucessor = self.pai.buscarSucessor()
                     self.pai.direita = self
         return sucessor
-
 
     # chave minima em uma sub arvore
     def chaveMinima(self):
