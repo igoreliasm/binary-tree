@@ -8,60 +8,63 @@ def limparTela():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def esvaziar():
-    print("Sua árvore está vazia!")
+    print("Sua Arvore esta vazia!")
     exit()
 
 def imprimirArvore():
     pass
 
 def menu():
-    print("Menu de utilização")
-    print("1 - Árvore vazia.")
-    print("2 - Incluir um nó.")
-    print("3 - Excluir um nó.")
-    print("4 - Retornar tamanho da árvore.")
-    print("5 - Sair.")
+    print("Menu de utilizacao")
+    print("1 - Arvore vazia.")
+    print("2 - Incluir um no.")
+    print("3 - Excluir um no.")
+    print("4 - Retornar tamanho da arvore.")
+    print("5 - Integrantes.")
+    print("6 - Sair.")
     print("\n")
 
 def integrantes():
     print("\n")
     print("** Disciplina de estrutura de dados **")
-    print("Integrantes da implementação de árvore binária:")
+    print("Integrantes da implementacao de arvore binaria:")
     print("Alessandro Rocha")
     print("Bruno Wantil")
     print("Igor Elias")
-    print("Lucas Bucker")
+    print("Lucas da Conceicao")
     print("Romantiezer Beloni")
     print("\n")
 
 if __name__ == "__main__":
-    integrantes()
     menu()
 
     arvore = Arvore()
 
     continuar = True
     while continuar:
-        op = int(raw_input("Entre com uma opção válida: "))
+        op = int(raw_input("Entre com uma opcao valida: "))
 
         if op == 1:
             esvaziar()
 
         elif op == 2:
-            print("Onde deseja inserir o nó? ")
+            print("Onde deseja inserir o no? ")
             posicao = int(raw_input("Ex.: 5: "))
-            item = int(raw_input("Entre com o nó desejado: "))
+            item = int(raw_input("Entre com o no desejado: "))
             arvore[posicao] = item
 
         elif op == 3:
-            item = int(raw_input("Digita a chave do nó que deseja remover: "))
+            item = int(raw_input("Digita a chave do no que deseja remover: "))
             arvore.deletar(item)
 
         elif op == 4:
-            print("Tamanho da árvore: ")
+            print("Tamanho da arvore: ")
             print(arvore.quantidade())
             
         elif op == 5:
+            integrantes()
+
+        elif op == 6:
             continuar = False
             limparTela()
             integrantes()
@@ -73,5 +76,4 @@ if __name__ == "__main__":
             limparTela()
         else:
             limparTela()
-            integrantes()
             menu()
