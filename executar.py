@@ -4,12 +4,9 @@ import os
 
 from arvore import Arvore
 
+#limpar a tela
 def limparTela():
     os.system('cls' if os.name == 'nt' else 'clear')
-
-def esvaziar():
-    print("Sua Arvore esta vazia!")
-    exit()
 
 def imprimirArvore():
     pass
@@ -45,7 +42,7 @@ if __name__ == "__main__":
         op = int(raw_input("Entre com uma opcao valida: "))
 
         if op == 1:
-            esvaziar()
+            arvore.esvaziar(arvore)
 
         elif op == 2:
             print("Onde deseja inserir o no? ")

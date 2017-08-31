@@ -36,6 +36,7 @@ class Arvore:
             self.raiz = No(chave, val)
         self.tamanho = self.tamanho + 1
 
+    #
     def _inserir(self, chave, val, noCorrente):
         if chave < noCorrente.chave:
             if noCorrente.temFilhoEsquerda():
@@ -88,6 +89,15 @@ class Arvore:
             self.tamanho = self.tamanho - 1
         else:
             raise KeyError('Chave nao encontrada na arvore atual')
+
+    #esvaziar toda a arvore
+    def esvaziar(self,arvore):
+        if arvore!=None:
+            arvore = None
+            self.tamanho = 0
+            print("Sua Arvore esta vazia!")
+        else:
+            print("Sua Arvore esta vazia!")
 
     # buscar sucessor
     def buscarSucessor(self):
@@ -148,7 +158,7 @@ class Arvore:
             noCorrente.chave = sucessor.chave
             noCorrente.carga = sucessor.carga
 
-        # tem um filho
+        # tem apenas um filho
         else:
             if noCorrente.temFilhoEsquerda():
                 if noCorrente.ehFilhoEsquerda():
