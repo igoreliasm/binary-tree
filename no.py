@@ -30,6 +30,7 @@ class No:
     def temAlgumFilho(self):
         return self.direita or self.esquerda
 
+    #funcao auxiliar que altera os dados da arvore, quando uma chave é excluida
     def alterarDadosNo(self, chave, valor, esquerda, direita):
         self.chave = chave
         self.carga = valor
