@@ -24,7 +24,7 @@ class Arvore:
             return True
         else:
             return False
-
+    
     def quantidade(self):
         return self.tamanho
 
@@ -33,11 +33,12 @@ class Arvore:
             self._inserir(chave, val, self.raiz)
 
         else:
+            # arvore iniciada
             self.raiz = No(chave, val)
         self.tamanho = self.tamanho + 1
 
-    #
     def _inserir(self, chave, val, noCorrente):
+        # valor chave do nó é menor doque o atual nó
         if chave < noCorrente.chave:
             if noCorrente.temFilhoEsquerda():
                 self._inserir(chave, val, noCorrente.esquerda)

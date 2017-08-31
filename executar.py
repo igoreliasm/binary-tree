@@ -45,8 +45,7 @@ if __name__ == "__main__":
             arvore.esvaziar(arvore)
 
         elif op == 2:
-            print("Onde deseja inserir o no? ")
-            posicao = int(raw_input("Ex.: 5: "))
+            posicao = int(raw_input("Entre com uma chave pare o nó:  "))
             item = int(raw_input("Entre com o no desejado: "))
             arvore[posicao] = item
 
